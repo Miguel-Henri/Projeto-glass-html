@@ -1,0 +1,288 @@
+@charset "UTF-8";
+@font-face{
+    font-family:fonte ;
+    src: url(../_fonts/bubblegum-sans-regular.otf);    
+}
+@import url('https://fonts.googleapis.com/css2? family= Ms+Madi & display=swap');
+
+
+
+/* Formatação containers e body*/
+
+body{background-color: #dddddd;
+font-family: arial,sans-serif;
+
+}
+/* Mexendo na Interface*/
+
+
+div#interface{
+width: 85%;
+background-color: white;
+margin:-1.2% auto 0px auto;
+padding: 1%;
+
+}
+
+
+/*Formatação de texto*/
+p{text-align: justify;text-indent: 50px;font-size: 30px;}
+h3.t{font-size: 80px;text-align: center;}
+p.ti{font-size: 30px;text-align: center;}
+a{color: #606060;
+transition: text-decoration 2s;}
+a:hover{
+
+color: black
+;
+}
+
+/*cabeçalho */
+header#cabecalho{
+border-bottom: 2px solid #606060;
+background: url("../_imagens/glass-logo-peq.jpg")no-repeat 0px 90px;
+height:150px;
+}
+
+header#cabecalho h1{
+font-family:fonte, sans-serif;
+font-size: 30pt;
+color: #606060;
+text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+padding: 0px;
+margin-bottom: 0px;
+}
+header#cabecalho h2{
+font-family: 'Ms Madi', cursiva;
+font-size: 15pt;
+color: #888888;
+padding: 0px;
+margin-top: 0px;
+
+
+}
+
+
+
+
+/*Formatação de imagem*/
+figure.foto-legenda{
+    border: 8px solid black;
+
+    position: relative;
+}
+figure.foto-legenda img{
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+figure.foto-legenda figcaption{
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    background-color:rgba(0,0,0,0.4);
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: opacity 5s;
+    color: white;
+
+}
+figure.foto-legenda:hover figcaption{
+opacity: 1;
+
+}
+
+
+/*Formatação de Menu*/
+
+nav#menu {
+display: block;
+
+}
+
+nav#menu ul{
+    list-style: none;
+    text-transform: uppercase;
+    position: absolute;
+    top:-10px ;
+    left: 58%;
+
+}
+nav#menu li{
+display: inline-block;
+background-color: #dddddd;
+padding: 10px;
+margin: 2px;
+transition: background 3s;
+
+}
+
+nav#menu li:hover{
+
+background-color: #606060;}
+
+
+nav#menu h1{display: none;}
+
+
+
+
+
+nav#menu a{
+
+color: black;
+text-decoration: none;
+}
+
+
+nav#menu a:hover{
+
+color: white;
+text-decoration: underline;
+}
+
+/*mexendo no cabeçalho*/
+
+div#interface header#cabecalho img#icone{
+position: absolute;
+margin-left:76.4% ;
+top: 9.8%;
+
+}
+
+/* Editando section */
+
+
+section#corpo{
+width: 55%;
+float: left;
+border-right: 1px solid black;
+padding-right: 5%;
+
+}
+
+article#np h2{
+font-size: 18pt;
+color: #606060;
+background-color: #dddddd;
+
+padding: 5px 0px;
+margin: 10px;
+}
+
+
+aside#lateral{
+
+width: 38%;
+float: right;
+background-color: #dddddd;
+padding: 10px;
+margin-top: 10px;
+box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+margin-right: 3px;
+}
+
+footer#rodape{
+clear: both;
+border-top: 1px solid black;
+}
+
+footer#rodape p{
+text-align: center;
+}
+
+
+/*edição de rodape*/
+table#tabela{
+border: 1px solid #606060;
+border-spacing: 0px;
+margin-left: auto;
+margin-right: auto;
+font-size: 20pt;
+
+}
+
+table#tabela td{
+border: 1px solid #606060;
+padding: 2%;
+}
+
+table#tabela td.e{
+color: white;
+background-color: #606060;
+font-weight: bold;
+vertical-align: top;
+text-align: right;}
+
+table#tabela td.d{
+background-color: #cecece;
+}
+table#tabela caption span{
+display: block;
+float: right;
+font-size: 12pt;
+margin: 0px;
+color: black;
+margin-top: 10px;
+
+}
+
+table#tabela caption{
+font-size: 20pt;
+font-weight: bolder;
+color: #606060;
+
+}
+
+
+header#artigo h1{
+font-family: fonte,sans-serif;
+font-size: 20pt;
+color: #606060;
+margin-bottom: 0px;
+margin-top: 0px;
+
+}
+
+
+header#artigo h2{
+    font-size: 20pt;
+    color: #cecece;
+    background-color: white;
+margin: 0px;
+
+}
+
+
+header#artigo h3{
+font-size: 12px;
+color: #606060;
+
+
+}
+
+
+.direita{
+text-align: right;
+}
+
+
+aside#lateral h1{
+font-size: 20pt;
+font-family: fonte,sans-serif;
+color: #606060;
+padding: 2px;
+margin-top: 0px;
+}
+
+
+
+aside#lateral h2{
+    background-color: #606060;
+    font-size: 15pt;
+    color: #ffffff;
+    padding: 5px;
+
+}

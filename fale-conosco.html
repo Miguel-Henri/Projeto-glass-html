@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Tudo sobre google glass</title> 
+<link rel="stylesheet" type="text/css" href="_css/estilo.css">
+<link rel="stylesheet" type="text/css" href="_css/form.css">
+
+<script >
+
+function calc(){
+number = parseInt(document.getElementById('Cqnt').value);
+
+recebe = number * 1500;
+
+document.getElementById('Ctot').value = recebe;
+
+}
+
+
+</script>
+
+</head>
+
+<script language="javascript" src="_javascript/funcoes.js"></script>
+<body>
+
+<div id="interface">
+<header id="cabecalho">        
+<hgroup>
+<h1>Google Glass</h1>
+<h2>A revolução do Google está chegando</h2>
+</hgroup>
+ 
+<img id="icone" src="_imagens/glass-oculos-preto-peq.png">
+
+
+<nav id="menu">
+
+
+ 
+
+<h1>Menu Principal</h1>
+<ul>
+<li onmouseover="trocaFoto('_imagens/home.png')" onmouseout="trocaFoto('_imagens/contato.png')"><a href="index.html"> Home</a></li>
+
+<li  onmouseover="trocaFoto('_imagens/especificacoes.png')" onmouseout="trocaFoto('_imagens/contato.png')"> <a href="specs.html">Especificações</a></li>
+
+<li onmouseover="trocaFoto('_imagens/fotos.png')" onmouseout="trocaFoto('_imagens/contato.png')"><a href="fotos.html"> Fotos</a></li>
+
+
+<li  onmouseover="trocaFoto('_imagens/multimidia.png')" onmouseout="trocaFoto('_imagens/contato.png')"><a href="multimidia.html"> Multimídia</a></li>
+
+
+
+<li  onmouseover="trocaFoto('_imagens/contato.png')" onmouseout="trocaFoto('_imagens/contato.png')"><a href="fale-conosco.html"> Fale conosco</a></li>
+</ul>
+
+
+</nav >
+</header>
+
+<hgroup>  
+        <header id="artigo"> 
+<h3>   Fale Conosco > Contato</h3>
+<h1>Formulário de Contato</h1>
+<h2>por Gustavo Guanabara</h2>
+<h3 class="direita"> Atualizado em 01/Maio/2013</h3>
+    </header>
+
+</hgroup>
+
+
+
+   
+
+<form method="post" action="mailto:miguelhbatista@gmail.com" oninput="calc();">
+
+<fieldset id="usuario">   
+
+     <h5>Identificação do Usuário</legend>
+        <h5><label for="Tnome">Nome:</label> <input type="text" name="Cnome" id="Tnome" size="20" maxlength="30" placeholder="Nome Completo"></h5>
+
+      <h5> <label for="Csenha"> Senha:</label> <input type="password" name="Tsenha" id="Csenha" size="8" maxlength="10" placeholder="senha"></h5>
+
+       <h5> <label for="Cemail"> E-mail: </label> <input type="email" name="Temail" id="Cemail" size="20" maxlength="40" placeholder="Email"></h5>
+
+       <fieldset id="sexo"><legend> Sexo: </legend>
+         <input type="radio" name="Tsexo" id="Cmasc">  <label for="Cmasc"> Masculino</label><br>
+        <input type="radio" name="Tsexo" id="Cfem">    <label for="Cfem">Feminino</label>
+        </fieldset>
+        <h5><label for="Cdate">Data de Nascimento:</label><input type="date" name="Tdate" id="Cdate"></h5>
+    </fieldset>
+
+<fieldset id="endereco">        
+
+    <legend>Endereço do Usuário</legend>
+        <label for="Clog">Logradouro:</label> <input type="text" name="Tlog" id="Clog" size="13" maxlength="80" placeholder="Av,Rua,Trav, ..."><br><br>
+
+        <label for="Cnum">Número: </label>    <input type="number" name="Tnum" id="Cnum" min="0" max="999999"><br><br>
+        <label for="Cest">Estado:</label>
+        <select name="Test" id="Cest">
+
+           <optgroup label="Sudeste"> 
+            <option selected>São Paulo</option>
+            <option>Rio de Janeiro</option>
+            <option>Espírito Santo </option>
+            </optgroup>
+
+           <optgroup label="Sul"> 
+            <option>Parana</option>
+            <option>Rio Grande Do Sul</option>
+            <option>Santa Catarina</option>
+           </optgroup>
+           
+
+        </select> <br><br>
+
+
+
+        <label for="Ccid" >Cidade:</label>
+        <input type="text" name="Tcid" id="Ccid" maxlength="40" size="20" placeholder="Sua cidade" list="cidades">
+        <datalist id="cidades">
+            <option value="Rio De Janeiro"></option>
+            <option value="Nova Iguaçu"></option>
+            <option value="Niterói"></option>
+            <option value="Belford Roxo"></option>
+        </datalist>
+
+</fieldset>
+
+<fieldset id="mensagem">
+    <legend>Mensagem do Usuário</legend>
+       <label for="Curg"> Grau de Urgência:</label>
+       min<input type="range" name="Turg" id="Curg" min="0" max="10" step="5">max<br><br>
+
+       <label for="Cmsg"> Mensagem:</label>
+       <textarea name="Tmsg" id="Cmsg" cols="35" rows="5" placeholder="Deixe Aqui sua mensagem"></textarea>
+
+</fieldset>
+
+
+<fieldset id="pedido">
+   <legend> Quero um Google Glass</legend>
+        <input type="checkbox" name="tPed" id="Cped" > <label for="Cped">Gostaria de adquirir um Google Glass quando disponível</label><br><br>
+
+        <label for="Ccor">Cor:</label> <input type="color" name="Tcor" id="Ccor" value="#0000FF"><br><br>
+        <label for="Cqnt">Quantidade:</label> <input type="number" name="Tqnt" id="Cqnt" min="0" max="5"><br><br>
+        <label for="Ctot">Preço Total: R$</label>
+        <input type="text" name="Ttot" id="Ctot" placeholder="Valor a se pagar!" readonly><br><br>
+</fieldset>
+
+   <input type="submit" name=""> </form>
+
+<footer id="rodape">
+
+<p>&copy; 2013 - by Gustavo Guanabara<br>
+Facebook | Twitter</p>
+
+</footer>
+
+
+</body>
+
+</html>
